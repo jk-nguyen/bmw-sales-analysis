@@ -12,7 +12,7 @@
 3. Which regions lead, and which are growing?
 
 ## Dataset
-- **Source:** [BMW Sales Data 2010–2024 – Kaggle](ADD-KAGGLE-LINK-HERE)
+- **Source:** BMW sales data (2010–2024), sourced via [abdelazizelserty's Kaggle notebook](https://www.kaggle.com/code/abdelazizelserty/bmw-sales-data/notebook)
 - **Size:** 50,000 records, 11 variables (categorical, numerical and date)
 - **Target variable:** `Sales_Volume`
 - **Predictors:** Model, Engine type, Fuel type, Colour, Transmission, Price (USD), Region
@@ -36,21 +36,34 @@ Prioritise **model range expansion** and **growth markets such as Europe** over 
 
 ## Limitations
 - The dataset lacks key external drivers such as customer income, purchase purpose and brand perception.
-- Sales values are unusually uniform, which suggests the data may be synthetic. Treat the findings as directional, and validate them with real market data before acting on them.
+- Sales values are spread almost perfectly evenly between about 100 and 10,000 units, which suggests the data may be synthetic. Treat the findings as directional, and validate them with real market data before acting on them.
 - Regression results show association, not causation.
 
 ## Tools
-Python (pandas, statsmodels) · Excel (pivot tables) · Tableau · Google Colab
+Python (pandas, statsmodels, seaborn) · Excel (pivot tables) · Tableau · Google Colab
 
 ## Dashboard
-[View the Tableau dashboard](ADD-TABLEAU-PUBLIC-LINK-HERE)
+Tableau dashboard showing sales volume by model family, region, fuel type, colour and transmission, with year and model filters.
+
+![BMW sales dashboard](images/dashboard.png)
+
+**Drill-down example (i models only):** Europe leads, and sales are near-identical across fuel types and colours.
+
+![i model drill-down](images/dashboard_i_models.png)
+
+## Price vs sales volume
+The points spread evenly across the whole chart, which means there is no relationship between price and sales volume.
+
+![Price vs sales scatter plot](images/price_vs_sales.png)
 
 ## Files
 | File | Description |
 |---|---|
 | `bmw_sales_analysis.ipynb` | Data cleaning, wrangling, EDA and regression |
-| `data/` | Source dataset (from Kaggle) |
+| `images/` | Dashboard and chart screenshots |
 | `requirements.txt` | Python packages needed to run the notebook |
+
+> The dataset is not included in this repo. Download it from the Kaggle link above and place it in a `data/` folder to run the notebook.
 
 ---
 *Completed as part of the Master of Information Technology (Adelaide University), Emerging Technologies, Data and Business Analytics course.*

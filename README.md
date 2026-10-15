@@ -62,6 +62,7 @@ The points spread evenly across the whole chart, which means there is no relatio
 | `bmw_sales_analysis.ipynb` | Data cleaning, wrangling, EDA and regression |
 | `images/` | Dashboard and chart screenshots |
 | `requirements.txt` | Python packages needed to run the notebook |
+| `bmw_sales_report.pdf` | Full analysis report: methodology, regression results and recommendations |
 
 > The dataset is not included in this repo. Download it from the Kaggle link above and place it in a `data/` folder to run the notebook.
 
